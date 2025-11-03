@@ -1,9 +1,9 @@
 // DOM Elements
-const productNameInput = document.getElementById('product-name');
-const productPriceInput = document.getElementById('product-price');
-const addProductButton = document.getElementById('add-product');
-const cart = document.getElementById('cart');
-const totalPriceSpan = document.getElementById('total-price');
+const productNameInput = document.getElementById("product-name");
+const productPriceInput = document.getElementById("product-pric");
+const addProductButton = document.getElementById("add-product");
+const cart = document.getElementById("cart");
+const totalPriceSpan = document.getElementById("total-price");
 
 let totalPrice = 0;
 
@@ -15,8 +15,8 @@ function updateTotalPrice(change) {
 
 // Create cart item
 function createCartItem(name, price) {
-  const li = document.createElement('li');
-  li.className = 'cart-item';
+  const li = document.createElement("li");
+  li.className = "cart-item";
   li.dataset.price = price; // Store base price
 
   const itemHTML = `
@@ -33,21 +33,21 @@ function createCartItem(name, price) {
   li.innerHTML = itemHTML;
 
   // Quantity controls
-  const decrement = li.querySelector('.decrement');
-  const increment = li.querySelector('.increment');
-  const quantitySpan = li.querySelector('.quantity');
-  const itemPriceSpan = li.querySelector('.item-price');
+  const decrement = li.querySelector(".decrement");
+  const increment = li.querySelector(".increment");
+  const quantitySpan = li.querySelector(".quantity");
+  const itemPriceSpan = li.querySelector(".item-price");
   let quantity = 1;
-
-  increment.addEventListener('click', () => {
+  // for increment 
+  increment.addEventListener("click", () => {
     quantity++;
     quantitySpan.textContent = quantity;
     const newItemTotal = price * quantity;
     itemPriceSpan.textContent = `$${newItemTotal.toFixed(2)}`;
     updateTotalPrice(price);
   });
-
-  decrement.addEventListener('click', () => {
+   // decrement 
+  decrement.addEventListener("click", () => {
     if (quantity > 1) {
       quantity--;
       quantitySpan.textContent = quantity;
@@ -58,33 +58,32 @@ function createCartItem(name, price) {
   });
 
   // Remove item
-  li.querySelector('.remove-btn').addEventListener('click', () => {
+  li.querySelector(".remove-btn").addEventListener("click", () => {
     const currentTotal = price * quantity;
     updateTotalPrice(-currentTotal);
     li.remove();
   });
-
   return li;
 }
 
 // Add product
-addProductButton.addEventListener('click', () => {
+addProductButton.addEventListener("click", () => {
   const name = productNameInput.value.trim();
   const price = parseFloat(productPriceInput.value);
 
   // Validation
   if (!name || isNaN(price) || price <= 0) {
-    alert('Please enter a valid product name and price.');
+    alert("Please enter a valid product name and price.");
     return;
   }
 
   const cartItem = createCartItem(name, price);
   cart.appendChild(cartItem);
 
-  updateTotalPrice(price); // Add initial price
+  updateTotalPrice(price);
 
-  // Clear inputs
-  productNameInput.value = '';
-  productPriceInput.value = '';
+  //inputs
+  productNameInput.value = " "
+  productPriceInput.value = ""
   productNameInput.focus();
 });
