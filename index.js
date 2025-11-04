@@ -1,6 +1,6 @@
 // DOM Elements
 const productNameInput = document.getElementById("product-name");
-const productPriceInput = document.getElementById("product-pric");
+const productPriceInput = document.getElementById("product-price");
 const addProductButton = document.getElementById("add-product");
 const cart = document.getElementById("cart");
 const totalPriceSpan = document.getElementById("total-price");
