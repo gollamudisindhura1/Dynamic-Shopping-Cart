@@ -1,31 +1,110 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  line-height: 1.6;
+  background: linear-gradient(135deg, #1a0033, #000033);
+  font-family: cursive;
+  color: #fff;
+  min-height: 100vh;
 }
  
-#product-container {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+#product-container input{
+  background: #000;
+  border: 2px solid #068706;
+  color: #ffffff;
+  font-family: cursive;
+  font-size: medium;
+  text-align: center;
+
+}
+#product-container input::placeholder{
+  color: #ffffff;
 }
  
-#cart {
-  list-style: none;
-  padding: 0;
+#product-container input:focus{
+  background: #001100;
+  box-shadow: 0 0 15px #088b08;
+  outline: none;
+}
+.btn-glow {
+  background: #ff0066;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff0066;
+  box-shadow: 0 0 15px #ff0066;
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  background: #ff3399;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff0066, 0 0 35px #ff3399;
 }
  
-.cart-item {
+.list-group-item {
+  background: rgba(0, 0, 50, 0.7);
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 0.9rem;
+  transition: 0.3s;
 }
- 
-.cart-item span {
-  flex: 1;
+
+.list-group-item:hover {
+  background: rgba(0, 50, 100, 0.8);
+  box-shadow: 0 0 20px #00ffff;
+  transform: translateY(-2px);
 }
- 
-.cart-item button {
-  margin-left: 10px;
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-btn {
+  width: 36px;
+  height: 36px;
+  background: #00ff00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quantity-btn:hover {
+  background: #00cc00;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ff00;
+}
+
+.quantity {
+  min-width: 30px;
+  text-align: center;
+  color: #ffff00;
+  font-weight: bold;
+}
+
+.item-price {
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+.remove-btn {
+  background: #ff3300;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #cc0000;
+  box-shadow: 0 0 15px #ff3300;
 }
