@@ -17,7 +17,7 @@ function updateTotalPrice(change) {
 function createCartItem(name, price) {
   const li = document.createElement("li");
   li.className = "cart-item";
-  li.dataset.price = price; // Store base price
+  li.dataset.basePrice = price; // Keeps the original price for later Calculations
 
   const itemHTML = `
     <span>${name}</span>
@@ -87,3 +87,17 @@ addProductButton.addEventListener("click", () => {
   productPriceInput.value = ""
   productNameInput.focus();
 });
+
+window.addToCartFromConsole = function (name, price) {
+  if (!name || typeof price !== "number" || price <= 0) {
+    console.warn("Invalid product:", { name, price });
+    return;
+  }
+  const fakeEvent = { target: addProductButton };
+  // simulate a click on the button with the fields filled
+  productNameInput.value = name;
+  productPriceInput.value = price;
+  addProductButton.dispatchEvent(new Event("click"));
+};
+
+console.log("%cShopping cart ready! Use addToCartFromConsole('Item', 9.99) to test.");

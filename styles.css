@@ -1,47 +1,46 @@
 body {
   background: linear-gradient(135deg, #1a0033, #000033);
   font-family: cursive;
-  color: #fff;
+  color: #ffffff;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
  
 #product-container input{
-  background: #000;
+  background: #111111; 
   border: 2px solid #068706;
   color: #ffffff;
   font-family: cursive;
   font-size: medium;
   text-align: center;
-
 }
 #product-container input::placeholder{
-  color: #ffffff;
-}
+  color: #bbbbbb; }
  
 #product-container input:focus{
   background: #001100;
-  box-shadow: 0 0 15px #088b08;
+  box-shadow: 0 0 12px #088b08; 
   outline: none;
 }
 .btn-glow {
-  background: #ff0066;
+  background: #cc0052; 
   color: white;
   font-weight: bold;
-  text-shadow: 0 0 10px #ff0066;
-  box-shadow: 0 0 15px #ff0066;
+  text-shadow: 0 0 8px #cc0052;
+  box-shadow: 0 0 12px #cc0052;
   transition: all 0.3s ease;
 }
 
 .btn-glow:hover {
-  background: #ff3399;
+  background: #cc3366;
   transform: scale(1.05);
-  box-shadow: 0 0 25px #ff0066, 0 0 35px #ff3399;
+  box-shadow: 0 0 20px #cc0052, 0 0 30px #cc3366;
 }
  
 .list-group-item {
-  background: rgba(0, 0, 50, 0.7);
-  border: 2px solid #00ffff;
-  color: #00ffff;
+  background: rgba(0, 0, 50, 0.5); 
+  color: #00cccc;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -52,8 +51,8 @@ body {
 }
 
 .list-group-item:hover {
-  background: rgba(0, 50, 100, 0.8);
-  box-shadow: 0 0 20px #00ffff;
+  background: rgba(0, 50, 100, 0.6);
+  box-shadow: 0 0 15px #00cccc;
   transform: translateY(-2px);
 }
 
@@ -66,7 +65,7 @@ body {
 .quantity-btn {
   width: 36px;
   height: 36px;
-  background: #00ff00;
+  background: #00cc00;
   color: #000;
   border: none;
   border-radius: 8px;
@@ -77,25 +76,25 @@ body {
 }
 
 .quantity-btn:hover {
-  background: #00cc00;
+  background: #00aa00;
   transform: scale(1.1);
-  box-shadow: 0 0 15px #00ff00;
+  box-shadow: 0 0 12px #00cc00;
 }
 
 .quantity {
   min-width: 30px;
   text-align: center;
-  color: #ffff00;
+  color: #cccc00; 
   font-weight: bold;
 }
 
 .item-price {
-  color: #ff00ff;
+  color: #cc00cc; 
   font-weight: bold;
 }
 
 .remove-btn {
-  background: #ff3300;
+  background: #cc3300; 
   color: white;
   border: none;
   padding: 6px 12px;
@@ -105,7 +104,6 @@ body {
 }
 
 .remove-btn:hover {
-  background: #cc0000;
-  box-shadow: 0 0 15px #ff3300;
+  background: #aa0000;
+  box-shadow: 0 0 12px #cc3300;
 }
-
