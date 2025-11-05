@@ -76,7 +76,6 @@ addProductButton.addEventListener("click", () => {
     alert("Please enter a valid product name and price.");
     return;
   }
-
   const cartItem = createCartItem(name, price);
   cart.appendChild(cartItem);
 

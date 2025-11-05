@@ -50,8 +50,7 @@ I was able to:
 4. What challenges did you face when implementing the remove functionality?
 - At first, removing items didn’t properly update the total. I fixed this by storing each item’s base price and subtracting the correct amount from the total before removing the element.
 
-5. What did you learn from your previous labs that helped here?
- - From my previous task management lab, I learned to always check the browser console for errors.
+From my previous task management lab, I learned to always check the browser console for errors. This lab helped me strengthen my understanding of event handling, DOM manipulation, and state updates in real time.
 
 ## Helpful Resources
 
